@@ -33,6 +33,14 @@ h2 {
   margin-bottom: 2rem;
 }
 
+header img.logo {
+  height: 125px;
+}
+
+header p.main-description {
+  font-size: 1.25rem;
+}
+
 .against-charcoal {
   color: rgba(255, 255, 255, 0.7);
   font-size: 4;
@@ -47,9 +55,9 @@ h2 {
   text-decoration: underline;
 }
 
-.against-turquoise {
+p.against-turquoise {
   color: #565f68;
-  margin: 0 150px 0 150px;
+  margin: 0;
 }
 
 .list {
@@ -264,13 +272,13 @@ header.masthead p {
   font-weight: 300;
 }
 
-/* Small devices (tablets, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   header.masthead p {
     font-size: 1.15rem;
   }
   header img.logo {
-    height: 100px;
+    height: 150px;
   }
 }
 
@@ -287,6 +295,9 @@ header.masthead p {
   }
   header img.logo {
     height: 200px;
+  }
+  header p.main-description {
+    font-size: 1.5rem;
   }
 }
 
