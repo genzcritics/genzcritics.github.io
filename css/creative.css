@@ -269,7 +269,7 @@ header.masthead p {
   header.masthead p {
     font-size: 1.15rem;
   }
-  header.logo {
+  header img.logo {
     height: 100px;
   }
 }
@@ -285,7 +285,7 @@ header.masthead p {
   header.masthead h1 {
     font-size: 3rem;
   }
-  header.logo {
+  header img.logo {
     height: 200px;
   }
 }
