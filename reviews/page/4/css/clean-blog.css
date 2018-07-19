@@ -38,8 +38,8 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-img {
-  width: 700px;
+img.preview-image {
+  width: 100%;
 }
 
 blockquote {
@@ -425,15 +425,30 @@ footer .copyright {
 /* PAGINATION
 -------------------------------------------------- */
 
-.pagination a {
-  font-size: 85%;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 25px;
+@media (min-width: 576px) {
+  .pagination a {
+    font-size: 85%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pagination a {
+    font-size: 75%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+    float: left;
+    padding: 8px 11px;
+    text-decoration: none;
+    border-radius: 20px;
+  }
 }
 
 .pagination a.active {

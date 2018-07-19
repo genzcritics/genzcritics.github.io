@@ -42,24 +42,36 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-.rounded-circle {
-  width: 200px;
+@media (min-width: 576px) {
+  img.rounded-circle {
+    width: 100%;
+  }
 }
 
-.member-info {
-  margin-top: 3rem;
+@media (max-width: 576px) {
+  img.rounded-circle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
 }
 
-.member {
-  margin: 0 13rem;
+@media (min-width: 576px) {
+  .member-info {
+    margin-top: 4rem;
+  }
 }
 
-.end-member {
-  margin: 1rem 0 2rem 0;
+@media (max-width: 576px) {
+  .member-info {
+    margin-top: 1rem;
+    text-align: center;
+  }
 }
 
-img {
-  width: 700px;
+img.preview-image {
+  width: 100%;
 }
 
 blockquote {
