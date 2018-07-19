@@ -17,23 +17,6 @@ p a {
   text-decoration: underline;
 }
 
-ul.archives-items {
-  list-style: none;
-  padding-left: 0;
-}
-
-.archives {
-  font-weight: 800;
-}
-
-.members {
-  margin: 1rem 10rem 1rem 10rem;
-}
-
-.member {
-  margin-bottom: 1rem;
-}
-
 h1,
 h2,
 h3,
@@ -43,17 +26,62 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@media (max-width: 576px) {
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  h4.hometown {
+    text-align: center;
+  }
+  .sm-hidden {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  h4.hometown {
+    text-align: center;
+  }
+  img.rounded-circle {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1.partners {
+    font-size: 30px;
+  }
+  img.nyfcs {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  img.nffty {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  img.bjff {
+    width: 100%;
+  }
+}
+
+h2 a:hover {
+  text-decoration: underline;
+  color: #21252a
+}
+
 h4 {
   font-weight: 400;
   font-family: 'Open Sans';
 }
 
-.rounded-circle {
-  width: 150px;
+p.description {
+  margin-top: 1rem;
 }
 
-.description {
-  margin: 1rem 0 1rem 0;
+.second-paragraph {
+  margin-top: 0;
 }
 
 a {
@@ -67,8 +95,33 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-img {
-  width: 700px;
+h4.archives {
+  font-weight: 800;
+}
+
+ul.archives-items {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+@media (min-width: 576px) {
+  img.rounded-circle {
+    width: 100%;
+  }
+  .lg-hidden {
+    display: none;
+  }
+  img.nyfcs {
+    width: 300px;
+    margin-right: 2rem;
+  }
+  img.nffty {
+    width: 300px;
+    margin-right: 2rem;
+  }
+  img.bjff {
+    width: 300px;
+  }
 }
 
 #mainNav {
@@ -273,6 +326,7 @@ footer .copyright {
   margin-bottom: 0;
   text-align: center;
 }
+
 
 
 /* SOCIAL MEDIA BUTTONS

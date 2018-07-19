@@ -17,22 +17,6 @@ p a {
   text-decoration: underline;
 }
 
-.row {
-  margin-bottom: 2rem;
-}
-
-.members {
-  margin: 1rem 10rem 1rem 10rem;
-}
-
-.member {
-  text-align: center;
-}
-
-.description {
-  margin-top: 1rem;
-}
-
 h1,
 h2,
 h3,
@@ -42,14 +26,57 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+h2 a:hover {
+  text-decoration: underline;
+  color: #21252a
+}
+
 h4 {
   font-weight: 400;
   font-family: 'Open Sans';
 }
 
-.rounded-circle {
-  width: 140px;
-  margin-bottom: 1rem;
+p.description {
+  margin-top: 1rem;
+}
+
+.member-information {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  h4.hometown {
+    text-align: center;
+  }
+  img.rounded-circle {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  img.rounded-circle {
+    width: 100%;
+  }
+}
+
+.subheading a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.subheading a:hover {
+  color: #fff;
 }
 
 a {
@@ -207,11 +234,6 @@ header.masthead .site-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.subheading a {
-  text-decoration: underline;
-  color: #fff;
-}
-
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
@@ -270,6 +292,7 @@ footer .copyright {
   margin-bottom: 0;
   text-align: center;
 }
+
 
 
 /* SOCIAL MEDIA BUTTONS

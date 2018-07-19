@@ -130,18 +130,36 @@ img::-moz-selection {
   margin-bottom: 1rem;
 }
 
-.overlay {
-  position: absolute;
-  top: 48px;
-  bottom: 0;
-  left: 68px;
-  right: 0;
-  height: 51.5%;
-  width: 52.5%;
-  opacity: 0;
-  transition: .2s ease;
-  background-color: #4299af;
-  border-radius: 50%;
+@media (min-width: 576px) {
+  .overlay {
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: 68px;
+    right: 0;
+    height: 51.5%;
+    width: 52.5%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: #4299af;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay {
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: 113px;
+    right: 0;
+    height: 51.5%;
+    width: 40%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: #4299af;
+    border-radius: 50%;
+  }
 }
 
 .service-box:hover .overlay {
