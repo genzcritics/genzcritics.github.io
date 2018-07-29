@@ -421,6 +421,19 @@ footer .copyright {
   padding: 25px 35px;
 }
 
+sup a {
+  text-decoration: none;
+}
+
+ol.footnotes {
+  font-size: 12pt;
+  padding-left: 1rem;
+}
+
+ol.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
 
 /* PAGINATION
 -------------------------------------------------- */
@@ -458,6 +471,7 @@ footer .copyright {
   border-radius: 50%;
   margin-left: 5px;
   margin-right: 5px;
+  font-size: 1.5rem;
 }
 
 /* Add a hover effect if you want */
