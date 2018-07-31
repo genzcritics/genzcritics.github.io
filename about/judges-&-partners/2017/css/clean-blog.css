@@ -107,6 +107,7 @@ ul.archives-items {
 @media (min-width: 576px) {
   img.rounded-circle {
     width: 100%;
+    margin-bottom: 1.5rem;
   }
   .lg-hidden {
     display: none;
