@@ -126,19 +126,21 @@ img::-moz-selection {
 }
 
 .rounded-circle {
-  width: 150px;
+  width: 180px;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
   .overlay {
+    display: block;
     position: absolute;
-    top: 48px;
+    margin: auto;
+    top: 0;
     bottom: 0;
-    left: 68px;
+    left: 0;
     right: 0;
-    height: 51.5%;
-    width: 52.5%;
+    margin-bottom: 1rem;
+    width: 180px;
     opacity: 0;
     transition: .2s ease;
     background-color: #4299af;
@@ -148,13 +150,15 @@ img::-moz-selection {
 
 @media (max-width: 576px) {
   .overlay {
+    display: block;
     position: absolute;
-    top: 48px;
+    margin: auto;
+    top: 0;
     bottom: 0;
-    left: 113px;
+    left: 0;
     right: 0;
-    height: 51.5%;
-    width: 40%;
+    margin-bottom: 1rem;
+    width: 180px;
     opacity: 0;
     transition: .2s ease;
     background-color: #4299af;
