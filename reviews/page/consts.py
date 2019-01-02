@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+HEADER = '''<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -76,32 +76,9 @@
     <div id="content" class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-<div class="post-preview"><a href="../../2017/6/2/Loving-Marriage-Is-a-Fundamental-Right.html"><h2 class="post-title"><em>Loving</em>: Marriage Is a Fundamental Right</h2></a><p class="post-meta">by <a href="../../author-profile/katelyn-tsai">Katie Tsai</a> on June 2, 2017</p><a href="../../2017/6/2/Loving-Marriage-Is-a-Fundamental-Right.html"><img class="preview-image" src="../img/loving.jpg"></a></div><hr>
+'''
 
-<div class="post-preview"><a href="../../2017/6/2/10-Years-Later-Spider-Man-3-Is-the-Best-Worst-Spider-Man-Film.html"><h2 class="post-title">10 Years Later <em>Spider-Man 3</em> Is the Best Worst <em>Spider-Man</em> Film</h2></a><p class="post-meta">by <a href="../../author-profile/jacob-levy">Jacob Levy</a> on June 2, 2017</p><a href="../../2017/6/2/10-Years-Later-Spider-Man-3-Is-the-Best-Worst-Spider-Man-Film.html"><img class="preview-image" src="../img/spiderman-3.jpg"></a></div><hr>
-
-<div class="post-preview"><a href="../../2017/6/1/Recap-2017-National-Film-Festival-for-Talented-Youth.html"><h2 class="post-title">Recap: 2017 National Film Festival for Talented Youth</h2></a><p class="post-meta">by <a href="../../author-profile/anthony-reyes">Anthony Reyes</a> on June 1, 2017</p><a href="../../2017/6/1/Recap-2017-National-Film-Festival-for-Talented-Youth.html"><img class="preview-image" src="../img/national-film-festival-for-talented-youth.jpg"></a></div><hr>
-
-<div class="post-preview"><a href="../../2017/5/27/Hard-Hitting-Character-Study-Light-on-Plot-How-Heavy-This-Hammer.html"><h2 class="post-title">Hard Hitting Character Study, Light on Plot: <em>How Heavy This Hammer</em></h2></a><p class="post-meta">by <a href="../../author-profile/alexander-leiss">Alexander Leiss</a> on May 27, 2017</p><a href="../../2017/5/27/Hard-Hitting-Character-Study-Light-on-Plot-How-Heavy-This-Hammer.html"><img class="preview-image" src="../img/how-heavy-this-hammer.jpg"></a></div><hr>
-
-
-<!-- Pagination -->
-          <div class="pagination justify-content-center">
-
-<a href="../7">&larr; Prev</a>
-<a href="../6">6</a>
-<a href="../7">7</a>
-<a href="" class="active">8</a>
-<a href="../9">9</a>
-<a href="../10">10</a>
-<a href="../9">Next &rarr;</a></div> <!-- ./ pagination -->
-        </div> <!-- ./ post-preview col -->
-      </div> <!-- ./ row -->
-    </div> <!-- ./ container -->
-
-    <hr>
-
-<!-- Footer -->
+FOOTER = '''<!-- Footer -->
     <footer>
       <div class="container">
         <div class="row justify-content-center">
@@ -138,3 +115,19 @@
   </body>
 
 </html>
+'''
+
+PAGINATION_HEADER = '''
+<!-- Pagination -->
+          <div class="pagination justify-content-center">
+
+'''
+
+PAGINATION_FOOTER = '''</div> <!-- ./ pagination -->
+        </div> <!-- ./ post-preview col -->
+      </div> <!-- ./ row -->
+    </div> <!-- ./ container -->
+
+    <hr>
+
+'''
