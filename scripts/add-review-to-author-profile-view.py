@@ -1,5 +1,5 @@
-# This script takes care of the time-consuming task of adding a review to the `pages` view 
-# of the genzcritics.com website. All post metadata (article url, title, subtitle, author 
+# This script takes care of the time-consuming task of adding a review to the `author-profile` 
+# view for each member of Gen Z Critics. All post metadata (article url, title, subtitle, author 
 # profile url, author name, date, image) is stored in `data.json`. This file parses through 
 # the json file and creates all html files with correct pagination numbers and links to the 
 # correct repositories.
