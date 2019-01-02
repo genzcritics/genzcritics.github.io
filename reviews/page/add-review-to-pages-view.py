@@ -163,4 +163,3 @@ for page in html_pages:
             f.write(page)
         except:
             print 'Errored on: ' + filename
-    

@@ -407,7 +407,7 @@
 	"image": "avengers.jpg"
 }, {
 	"article": "2018/9/19/Good-&-Evil-Are-Proven-to-Be-Indistinguishable-in-The-Killing-of-a-Sacred-Deer",
-	"title": "Good & Evil Are Proven to Be Indistinguishable in <em>The Killing of a Sacred Deer",
+	"title": "Good & Evil Are Proven to Be Indistinguishable in <em>The Killing of a Sacred Deer</em>",
 	"profile": "jacob-levy",
 	"author": "Jacob Levy",
 	"date": "September 19, 2018",
@@ -428,4 +428,12 @@
 	"author": "Jack Porter",
 	"date": "November 20, 2018",
 	"image": "jamie.jpg"
+}, {
+	"article": "2019/1/1/Monsters-Universitys-Brutally-Honest-Life-Lesson",
+	"title": "&ldquo;Monsters University&rsquo;s&rdquo; Brutally Honest Life Lesson",
+	"subtitle": "Sometimes you&rsquo;ll try your best and yet still fail",
+	"profile": "jacob-levy",
+	"author": "Jacob Levy",
+	"date": "January 1, 2019",
+	"image": "monsters-university.jpg"
 }]
