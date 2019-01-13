@@ -7,7 +7,7 @@
 import json
 import consts
 
-with open('../data.json') as d:
+with open('../reviews-data.json') as d:
     entries = json.load(d)
 
 
@@ -35,7 +35,7 @@ num_posts_leftover = len(posts) % 4
 
 html_pages = []
 for i in range(0, num_pages):
-    html = consts.HEADER
+    html = consts.PAGES_HEADER
     html += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
     html += consts.PAGINATION_HEADER
     
@@ -73,7 +73,7 @@ for i in range(0, num_pages):
 ############################################################################
 if num_posts_leftover == 0:
     # First, flesh out the html and pagination for the last page
-    html = consts.HEADER
+    html = consts.PAGES_HEADER
     for post in posts[-4:]:
         html += post
     html += consts.PAGINATION_HEADER
@@ -91,7 +91,7 @@ if num_posts_leftover == 0:
     html_pages[len(html_pages) - 1] = html
     
     # Now flesh out the html and pagination for the penultimate page
-    html = consts.HEADER
+    html = consts.PAGES_HEADER
     for post in posts[-8:-4]:
         html += post
     html += consts.PAGINATION_HEADER
@@ -112,7 +112,7 @@ if num_posts_leftover == 0:
     html_pages[len(html_pages) - 2] = html
 else:
     # First, flesh out the html and pagination for the last page
-    html = consts.HEADER
+    html = consts.PAGES_HEADER
     for post in posts[-num_posts_leftover:]:
         html += post
     html += consts.PAGINATION_HEADER
@@ -130,7 +130,7 @@ else:
     html_pages.append(html)
     
     # Now flesh out the html and pagination for the penultimate page
-    html = consts.HEADER
+    html = consts.PAGES_HEADER
     for post in posts[-(4 + num_posts_leftover):-num_posts_leftover]:
         html += post
     html += consts.PAGINATION_HEADER
