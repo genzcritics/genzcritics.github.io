@@ -44,7 +44,7 @@ PAGES_HEADER = '''<!DOCTYPE html>
               <a class="nav-link" href="../../../#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../..">Reviews & Essays</a>
+              <a class="nav-link" href="../../page/1">Reviews & Essays</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../../about/news-&-updates">News & Updates</a>
@@ -120,7 +120,7 @@ AUTHOR_HEADER = '''
               <a class="nav-link" href="../../../#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../..">Reviews & Essays</a>
+              <a class="nav-link" href="../../page/1">Reviews & Essays</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../../about/news-&-updates">News & Updates</a>
