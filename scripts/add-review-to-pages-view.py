@@ -6,6 +6,7 @@
 
 import json
 import consts
+import os
 
 with open('../reviews-data.json') as d:
     entries = json.load(d)
@@ -156,6 +157,11 @@ else:
 # STEP 4: Save the html pages as index.html files into the correct repositories
 ############################################################################
 absolute_path = '/Users/sharonkim/genzcritics.github.io/reviews/page/'
+for i in range(1, len(html_pages) + 1):
+    if not os.path.exists(absolute_path + str(i)):
+        os.makedirs(absolute_path + (str(i)))
+        print 'Copy file dependencies for reviews/page/' + str(i)
+
 for page in html_pages:
     filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
     with open(filename, 'w') as f:
