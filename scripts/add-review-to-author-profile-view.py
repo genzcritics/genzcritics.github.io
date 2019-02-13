@@ -24,32 +24,32 @@ for author_id in authors_in_alphabetical_order:
     else:
         print author_id
 print '##################################################'
-author = raw_input('Now please enter the author ID: ')
 
-if author not in authors_in_alphabetical_order:
-    print 'Not a valid author id'
-else:
-    html = consts.AUTHOR_HEADER
-    
-    author_obj = author_entries[author]
-    s = '<img class="rounded-circle" src="img/' + author + '.png" alt="' + author_obj['name'] + '">'
-    s += '</div><div class="col-lg-auto member-info">'
-    s += '<h2 class="name">' + author_obj['name'] + '</h2>'
-    s += '<h4 class="location">' + author_obj['location'] + '</h4></div></div>'
-    s += '<p>' + author_obj['bio'] + '</p><hr>'
-    html += s
-    
-    posts_by_author = filter(lambda entry: entry['profile'] == author, review_entries)
-    for post in posts_by_author:
-        html = '<div class="post-preview"><a href="../../' + post['article'] + '.html">'
-        html += '<h2 class="post-title">' + post['title'] + '</h2>'
-        html += '<h3 class="post-subtitle">' + post['subtitle'] + '</h3></a>' if 'subtitle' in post.keys() else '</a>'
-        html += '<p class="post-meta">by <a href="../../author-profile/' + post['profile'] + '">'
-        html += post['author'] + '</a> on ' + post['date'] + '</p>'
-        html += '<a href="../../' + post['article'] + '.html">'
-        html += '<img class="preview-image" src="../img/' + post['image'] + '"></a></div><hr>\n\n'
-    
-    html += consts.PAGINATION_HEADER
+author = raw_input('Now please enter the author ID: ')
+while author not in authors_in_alphabetical_order:
+    author = raw_input('Enter the author ID again: ')
+
+html = consts.AUTHOR_HEADER
+
+author_obj = author_entries[author]
+s = '<img class="rounded-circle" src="img/' + author + '.png" alt="' + author_obj['name'] + '">'
+s += '</div><div class="col-lg-auto member-info">'
+s += '<h2 class="name">' + author_obj['name'] + '</h2>'
+s += '<h4 class="location">' + author_obj['location'] + '</h4></div></div>'
+s += '<p>' + author_obj['bio'] + '</p><hr>'
+html += s
+
+posts_by_author = filter(lambda entry: entry['profile'] == author, review_entries)
+for post in posts_by_author:
+    html = '<div class="post-preview"><a href="../../' + post['article'] + '.html">'
+    html += '<h2 class="post-title">' + post['title'] + '</h2>'
+    html += '<h3 class="post-subtitle">' + post['subtitle'] + '</h3></a>' if 'subtitle' in post.keys() else '</a>'
+    html += '<p class="post-meta">by <a href="../../author-profile/' + post['profile'] + '">'
+    html += post['author'] + '</a> on ' + post['date'] + '</p>'
+    html += '<a href="../../' + post['article'] + '.html">'
+    html += '<img class="preview-image" src="../img/' + post['image'] + '"></a></div><hr>\n\n'
+
+html += consts.PAGINATION_HEADER
 
 
 ############################################################################
