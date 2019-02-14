@@ -27,7 +27,7 @@ print '##################################################'
 
 author = raw_input('Now please enter the author ID: ')
 while author not in authors_in_alphabetical_order:
-    author = raw_input('Enter the author ID again: ')
+    author = raw_input('That author does not exist; please enter the author ID again: ')
 
 html = consts.AUTHOR_HEADER
 
