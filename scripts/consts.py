@@ -196,6 +196,49 @@ FOOTER = '''<!-- Footer -->
 </html>
 '''
 
+AUTHOR_FOOTER = '''
+<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-0">
+            <a href="https://www.facebook.com/genzcritics/" class="fa fa-facebook" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://twitter.com/genzcritics/" class="fa fa-twitter" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://www.instagram.com/genzcritics/" class="fa fa-instagram" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://www.youtube.com/channel/UCS2AfcFO_96svDhcG1KIj_A" class="fa fa-youtube" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="mailto:genzcritics@gmail.com" class="fa fa-envelope"></a>
+          </div>
+        </div>
+        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.js"></script>
+
+  </body>
+
+</html>
+
+'''
+
+AUTHOR_FOOTER_NO_PAGINATION = '''
+</div> <!-- ./ post-preview col -->
+      </div> <!-- ./ row -->
+    </div> <!-- ./ container -->''' + AUTHOR_FOOTER
+
 PAGINATION_HEADER = '''
 <!-- Pagination -->
           <div class="pagination justify-content-center">
