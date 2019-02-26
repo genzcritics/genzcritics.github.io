@@ -65,28 +65,36 @@ for post in posts_by_author.reverse(): # the json is in chronological order; we 
 
 
 ############################################################################
-# STEP 4: Write the complete html code for each page view, except for the 
-# penultimate and last pages
+# STEP 4: Flesh out the complete html code for each page view, depending on 
+# how many pages the author requires
 ############################################################################
-num_pages = len(posts) / 4
-num_posts_leftover = len(posts) % 4
+html = ''
+CLOSE_POSTS_DIV = '</div></div></div><hr>'
 
-html = header
-html_pages = []
+if len(posts) == 0: # the author has not written any posts
+    html = header + consts.AUTHOR_NO_POSTS + CLOSE_POSTS_DIV + consts.AUTHOR_FOOTER
 
-if num_pages == 0: # Just the single page suffices
-    html += reduce((lambda x, y: x + y), posts)
-    html += consts.AUTHOR_FOOTER_NO_PAGINATION
-    filename = '/Users/sharonkim/genzcritics.github.io/reviews/author-profile/' + author + 'index.html'
-    with open(filename, 'w') as f:
-        try:
-            f.write(html)
-        except:
-            print 'Errored on: ' + filename
-else: # The author requires more than one page to display all reviews
+elif len(posts) >= 1 and len(posts) <= 4: # the author only needs one page
+    html = header + reduce((lambda x, y: x + y), posts) + CLOSE_POSTS_DIV + consts.AUTHOR_FOOTER
+
+else: # the author needs pagination and multiple pages
+    num_pages = len(posts) / 4
+    num_posts_leftover = len(posts) % 4
+    
+    if num_posts_leftover == 0:
+        pagination = [''] * num_pages
+    else:
+        pagination = [''] * (num_pages + 1)
+    
+    for p in pagination:
+        
+    
+    html_page = header
+    html_pages = []
+    
     for i in range(0, num_pages):
-        html += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
-        html += consts.PAGINATION_HEADER
+        html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
+        html_page += consts.PAGINATION_HEADER
         pagination = [''] * 7
         if i == 0: # If it's the first page, i.e. contains the most recent posts
             pagination[0] = '<a href="" class="active">1</a>'
@@ -109,15 +117,15 @@ else: # The author requires more than one page to display all reviews
             pagination[4] = '<a href="../' + str((i+1)+1) + '">' + str((i+1)+1) + '</a>'
             pagination[5] = '<a href="../' + str((i+1)+2) + '">' + str((i+1)+2) + '</a>'
             pagination[6] = '<a href="../' + str((i+1)+1) + '">Next &rarr;</a>'
-        html += '\n'.join(pagination)
+        html_page += '\n'.join(pagination)
         
-        html += consts.PAGINATION_FOOTER
-        html += consts.FOOTER
-        html_pages.append(html)
+        html_page += consts.PAGINATION_FOOTER
+        html_page += consts.FOOTER
+        html_pages.append(html_page)
 
 
 # ############################################################################
-# # STEP 4: Save the html pages as index.html files into the correct repositories
+# # STEP 5: Save the html pages as index.html files into the correct repositories
 # ############################################################################
 absolute_path = '/Users/sharonkim/genzcritics.github.io/reviews/author-profile/' + author
 for page in html_pages:

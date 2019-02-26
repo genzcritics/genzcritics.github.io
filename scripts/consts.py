@@ -234,10 +234,13 @@ AUTHOR_FOOTER = '''
 
 '''
 
-AUTHOR_FOOTER_NO_PAGINATION = '''
-</div> <!-- ./ post-preview col -->
-      </div> <!-- ./ row -->
-    </div> <!-- ./ container -->''' + AUTHOR_FOOTER
+AUTHOR_NO_POSTS = '''
+<div class="post-preview">
+            <h2 class="post-title">
+              No posts yet.
+            </h2>
+          </div>
+'''
 
 PAGINATION_HEADER = '''
 <!-- Pagination -->
