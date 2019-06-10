@@ -22,11 +22,6 @@ PAGES_HEADER = '''<!DOCTYPE html>
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.css" rel="stylesheet">
 
-    <!-- For pagination -->
-    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="./jquery.bootpag.min.js"></script>
-
   </head>
 
   <body id="page-top">
@@ -182,11 +177,11 @@ FOOTER = '''<!-- Footer -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.js"></script>
