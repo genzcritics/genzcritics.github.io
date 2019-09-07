@@ -172,7 +172,7 @@ FOOTER = '''<!-- Footer -->
             <a href="mailto:genzcritics@gmail.com" class="fa fa-envelope"></a>
           </div>
         </div>
-        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2018</p>
+        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2020</p>
       </div>
     </footer>
 
@@ -209,7 +209,7 @@ AUTHOR_FOOTER = '''
             <a href="mailto:genzcritics@gmail.com" class="fa fa-envelope"></a>
           </div>
         </div>
-        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2018</p>
+        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2020</p>
       </div>
     </footer>
 
