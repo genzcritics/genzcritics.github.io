@@ -1,0 +1,6 @@
+to onboard new members for a new year:
+ - make a new members repository with new year as folder name under about/members/new_year
+ - update the archives list for each html page
+ - make a copy of the most recent (new_year/index.html) in the about/members repository (instead of a level deeper), since the "members" link on the main page points to this index.html
+ - make sure the img repository for this copy has the updated photos
+ - create author profiles for each new writer
