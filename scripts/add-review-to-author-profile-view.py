@@ -6,11 +6,11 @@
 import json
 import consts
 
-with open('../author-data.json') as d:
-    author_entries = json.load(d)
+with open('../author-data.json') as author_data:
+    author_entries = json.load(author_data)
 
-with open ('../reviews-data.json') as d:
-    review_entries = json.load(d)
+with open('../reviews-data.json') as reviews_data:
+    review_entries = json.load(reviews_data)
 
 
 ############################################################################
@@ -19,7 +19,7 @@ with open ('../reviews-data.json') as d:
 print '##################################################'
 print '#################### hello :) ####################'
 print '##################################################'
-print '\nHere is a list of all author IDs, ordered alphabetically, so you can verify the author ID:\n'
+print '\nHere is a list of all author IDs so you can verify the author ID:'
 authors_in_alphabetical_order = sorted(author_entries.keys())
 for author_id in authors_in_alphabetical_order:
     if 'anthony-d' in author_id:
@@ -28,9 +28,9 @@ for author_id in authors_in_alphabetical_order:
         print author_id
 print '##################################################'
 
-author = raw_input('Now please enter the author ID: ')
+author = raw_input('Now enter the author ID: ')
 while author not in authors_in_alphabetical_order:
-    author = raw_input('That author does not exist; please enter the author ID again: ')
+    author = raw_input('That author does not exist; please enter the author ID again: ') # TODO: How do you quit out of the program?????
 
 
 ############################################################################
@@ -39,7 +39,7 @@ while author not in authors_in_alphabetical_order:
 header = consts.AUTHOR_HEADER
 
 author_obj = author_entries[author]
-s = '<img class="rounded-circle" src="img/' + author + '.png" alt="' + author_obj['name'] + '">'
+s = '<img class="rounded-circle" src="../img/' + author + '.jpg" alt="' + author_obj['name'] + '">'
 s += '</div><div class="col-lg-auto member-info">'
 s += '<h2 class="name">' + author_obj['name'] + '</h2>'
 s += '<h4 class="location">' + author_obj['location'] + '</h4></div></div>'
@@ -53,7 +53,7 @@ header += s
 ############################################################################
 posts_by_author = filter(lambda entry: entry['profile'] == author, review_entries)
 posts = []
-for post in posts_by_author.reverse(): # the json is in chronological order; we want to display reverse chronological order
+for post in reversed(posts_by_author): # the json is in chronological order; we want to display reverse chronological order
     post_html = '<div class="post-preview"><a href="../../' + post['article'] + '.html">'
     post_html += '<h2 class="post-title">' + post['title'] + '</h2>'
     post_html += '<h3 class="post-subtitle">' + post['subtitle'] + '</h3></a>' if 'subtitle' in post.keys() else '</a>'
@@ -70,68 +70,59 @@ for post in posts_by_author.reverse(): # the json is in chronological order; we 
 ############################################################################
 html = ''
 CLOSE_POSTS_DIV = '</div></div></div><hr>'
+reminder_message = ''
 
-if len(posts) == 0: # the author has not written any posts
-    html = header + consts.AUTHOR_NO_POSTS + CLOSE_POSTS_DIV + consts.AUTHOR_FOOTER
+num_pages = len(posts) / 4 # TODO: Maybe include an error-catcher here if the value is 0.
+num_posts_leftover = len(posts) % 4
 
-elif len(posts) >= 1 and len(posts) <= 4: # the author only needs one page
+# TODO: What if num_pages is 0? Could there be such a scenario?
+#   - Probably not. I would probably not have entered in that author's ID at the 
+#     beginning if that were the case. But this is an important note for always 
+#     posting the review first (i.e., putting in the necessary information in 
+#     reviews-data.json, before running this python script.)
+if num_pages == 1 and num_posts_leftover == 0: # the author only needs one page
     html = header + reduce((lambda x, y: x + y), posts) + CLOSE_POSTS_DIV + consts.AUTHOR_FOOTER
-
-else: # the author needs pagination and multiple pages
-    num_pages = len(posts) / 4
-    num_posts_leftover = len(posts) % 4
-    
-    if num_posts_leftover == 0:
-        pagination = [''] * num_pages
-    else:
-        pagination = [''] * (num_pages + 1)
-    
-    for p in pagination:
-        
-    
-    html_page = header
+else: # the author needs multiple pages. Pagination to be done manually.
+    reminder_message = '***Remember to manually include pagination for each page!***'
+    reminder_message += '\n***Also remember to copy `index.html` from `page/1` to the "root" repo of that author and adjust the pagination for that specific page accordingly.***'
     html_pages = []
     
     for i in range(0, num_pages):
+        html_page = header
         html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
-        html_page += consts.PAGINATION_HEADER
-        pagination = [''] * 7
-        if i == 0: # If it's the first page, i.e. contains the most recent posts
-            pagination[0] = '<a href="" class="active">1</a>'
-            for j in range(1, 5):
-                pagination[j] = '<a href="../' + str(j+1) + '">' + str(j+1) + '</a>'
-            pagination[5] = '<a href="../6">Next &rarr;</a>'
-            pagination[6] = ''
-        elif i == 1: # Second page
-            pagination[0] = '<a href="../1">&larr; Prev</a>'
-            pagination[1] = '<a href="../1">1</a>'
-            pagination[2] = '<a href="" class="active">2</a>'
-            for j in range(3, 6):
-                pagination[j] = '<a href="../' + str(j) + '">' + str(j) + '</a>'
-            pagination[6] = '<a href="../2">Next &rarr;</a>'
-        else: # For all other pages; last and penultimate pages handled below
-            pagination[0] = '<a href="../' + str((i+1)-1) + '">&larr; Prev</a>'
-            pagination[1] = '<a href="../' + str((i+1)-2) + '">' + str((i+1)-2) + '</a>'
-            pagination[2] = '<a href="../' + str((i+1)-1) + '">' + str((i+1)-1) + '</a>'
-            pagination[3] = '<a href="" class="active">' + str((i+1)-0) + '</a>'
-            pagination[4] = '<a href="../' + str((i+1)+1) + '">' + str((i+1)+1) + '</a>'
-            pagination[5] = '<a href="../' + str((i+1)+2) + '">' + str((i+1)+2) + '</a>'
-            pagination[6] = '<a href="../' + str((i+1)+1) + '">Next &rarr;</a>'
-        html_page += '\n'.join(pagination)
-        
-        html_page += consts.PAGINATION_FOOTER
-        html_page += consts.FOOTER
+        html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
+        html_page += consts.AUTHOR_FOOTER
+        html_pages.append(html_page)
+    
+    if num_posts_leftover > 0:
+        html_page = header
+        for i in range(0, num_posts_leftover):
+            html_page += posts[num_pages*4 + i]
+        html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
+        html_page += consts.AUTHOR_FOOTER
         html_pages.append(html_page)
 
 
-# ############################################################################
-# # STEP 5: Save the html pages as index.html files into the correct repositories
-# ############################################################################
+#############################################################################
+# STEP 5: Save the html pages as index.html files into the correct repositories
+#############################################################################
 absolute_path = '/Users/sharonkim/genzcritics.github.io/reviews/author-profile/' + author
-for page in html_pages:
-    filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
+
+if num_pages == 1 and num_posts_leftover == 0:
+    filename = absolute_path + '/index.html'
     with open(filename, 'w') as f:
         try:
-            f.write(page)
+            f.write(html)
         except:
             print 'Errored on: ' + filename
+else:
+    absolute_path += '/page/'
+    for page in html_pages:
+        filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
+        with open(filename, 'w') as f:
+            try:
+                f.write(page)
+            except:
+                print 'Errored on: ' + filename
+
+print reminder_message

@@ -77,7 +77,7 @@
 	"elizabeth-kim": {
 		"name": "Elizabeth Kim",
 		"location": "San Jose, CA",
-		"bio": "A freshman at Stanford University, Elizabeth &ldquo;Betsy&rdquo; Kim interned at the <a href="https://www.festival-cannes.com/en/" target="_blank">Cannes International Film Festival</a> in 2018. Her favorite movies of 2018 are <em>Annihilation</em> and <em>Widows</em>."
+		"bio": "A freshman at Stanford University, Elizabeth &ldquo;Betsy&rdquo; Kim interned at the <a href=\"https://www.festival-cannes.com/en/\" target=\"_blank\">Cannes International Film Festival</a> in 2018. Her favorite movies of 2018 are <em>Annihilation</em> and <em>Widows</em>."
 	},
 	"davey-huang": {
 		"name": "Davey Huang",
@@ -87,12 +87,12 @@
 	"ben-wasserman": {
 		"name": "Ben Wasserman",
 		"location": "Worcester, MA",
-		"bio": "Ben Wasserman is a twenty-one year old aspiring film critic. A senior at Clark University majoring in Screen Studies, Ben&rsquo;s love for the technical aspect of cinema emerged during mid-high school, during which he took numerous courses in television production. This passion has since been incorporated into his college courses and internships at <a href="https://comicsverse.com/" target="blank">ComicsVerse</a> and <a href="https://www.mxdwn.com/" target="blank">Mxdwn</a>, in which he reviews and analyzes newly released films and entries in the comic book medium. Amongst his favorite films are <em>Raiders of the Lost Ark</em>, <em>The Dark Knight</em>, <em>2001: A Space Odyssey</em>, and <em>Collateral</em>."
+		"bio": "Ben Wasserman is a twenty-one year old aspiring film critic. A senior at Clark University majoring in Screen Studies, Ben&rsquo;s love for the technical aspect of cinema emerged during mid-high school, during which he took numerous courses in television production. This passion has since been incorporated into his college courses and internships at <a href=\"https://comicsverse.com/\" target=\"blank\">ComicsVerse</a> and <a href=\"https://www.mxdwn.com/\" target=\"blank\">Mxdwn</a>, in which he reviews and analyzes newly released films and entries in the comic book medium. Amongst his favorite films are <em>Raiders of the Lost Ark</em>, <em>The Dark Knight</em>, <em>2001: A Space Odyssey</em>, and <em>Collateral</em>."
 	},
 	"anthony-reyes": {
 		"name": "Anthony Reyes",
 		"location": "New York, NY",
-		"bio": "nthony Reyes is a recent college graduate from CUNY Hunter College and lives in New York as a freelance Production Associate. Currently he is working for <a href="http://rumur.com/" target="blank">Rumur Inc.</a>, a Brooklyn-based production studio behind many award-winning documentaries such as <em>Battle for Brooklyn</em> and <em>Who Took Johnny?</em>, the latter of which can be found on Netflix. With one short film under his belt and many ideas for future projects, Anthony hopes to create more content and write for television in the future. Film criticism allows him to explore how a specific film makes him feel a certain way, and how he can use it to develop his own craft as a storyteller. Some of his favorite films include Richard Linklater&rsquo;s <em>Before</em> trilogy, Robert De Niro&rsquo;s <em>A Bronx Tale</em>, Paul Thomas Anderson&rsquo;s <em>Punch-Drunk Love</em>, and Spike Jonze&rsquo;s <em>Her</em>."
+		"bio": "nthony Reyes is a recent college graduate from CUNY Hunter College and lives in New York as a freelance Production Associate. Currently he is working for <a href=\"http://rumur.com/\" target=\"blank\">Rumur Inc.</a>, a Brooklyn-based production studio behind many award-winning documentaries such as <em>Battle for Brooklyn</em> and <em>Who Took Johnny?</em>, the latter of which can be found on Netflix. With one short film under his belt and many ideas for future projects, Anthony hopes to create more content and write for television in the future. Film criticism allows him to explore how a specific film makes him feel a certain way, and how he can use it to develop his own craft as a storyteller. Some of his favorite films include Richard Linklater&rsquo;s <em>Before</em> trilogy, Robert De Niro&rsquo;s <em>A Bronx Tale</em>, Paul Thomas Anderson&rsquo;s <em>Punch-Drunk Love</em>, and Spike Jonze&rsquo;s <em>Her</em>."
 	},
 	"anthony-d’eredita": {
 		"name": "Anthony D&rsquo;Eredita",
@@ -107,6 +107,91 @@
 	"ada-grey": {
 		"name": "Ada Grey",
 		"location": "Chicago, IL",
-		"bio": "Ada has been reviewing plays, and sometimes movies, since she was 4 years old at her blog <a href="http://adagrey.blogspot.com/" target="blank">Ada Grey Reviews for You</a>. She is now 12 and also enjoys acting on stage and screen. She has appeared on episodes of <em>Sirens and Chicago Fire</em>, in the web series <em>Funny.</em>, <em>Jacketman</em>, and <em>Under Covers</em>, and in many plays in Chicago.  She has had the pleasure of interviewing some really great people like the voice actors from <em>The Good Dinosaur</em>, as well as Michael Urie, Ana Villafa&ntilde;e, Josh Segarra, and Dee Snider."
+		"bio": "Ada has been reviewing plays, and sometimes movies, since she was 4 years old at her blog <a href=\"http://adagrey.blogspot.com/\" target=\"blank\">Ada Grey Reviews for You</a>. She is now 12 and also enjoys acting on stage and screen. She has appeared on episodes of <em>Sirens and Chicago Fire</em>, in the web series <em>Funny.</em>, <em>Jacketman</em>, and <em>Under Covers</em>, and in many plays in Chicago.  She has had the pleasure of interviewing some really great people like the voice actors from <em>The Good Dinosaur</em>, as well as Michael Urie, Ana Villafa&ntilde;e, Josh Segarra, and Dee Snider."
+	},
+	"rose-lehrman": {
+		"name": "Rose Lehrman",
+		"location": "Hudson, NY",
+		"bio": "Rose is currently a sophomore at Interlochen Arts Academy studying Motion Picture Arts. She is from the Upper Hudson Valley, where her interest in film was piqued by a local film festival when she was in the fifth grade, and she has been talking about and writing about films ever since."
+	},
+	"jacob-boblitt": {
+		"name": "Jacob Boblitt",
+		"location": "New York, NY",
+		"bio": "I originally hail from Warwick, Rhode Island where I was raised by two parents and two dogs. Throughout high school I made short films with my friends which got me hooked on the process. I aspire to write for a TV show and to hike the Appalachian Trail. I am currently a freshman attending New York University Tisch School of the Arts for film and television."
+	},
+	"jennifer-woo": {
+		"name": "Jennifer Woo",
+		"location": "Brooklyn, NY",
+		"bio": "I am a Motion Picture Artist in the 11th grade at Interlochen Arts Academy. I went to Fiorello H. LaGuardia High School for my first two years of high school but recently transferred. I grew up in Brooklyn, NY, with my dad. I love all types of art, but filmmaking and writing are my two main focuses at the moment."
+	},
+	"maya-shah": {
+		"name": "Maya Shah",
+		"location": "Baltimore, MD",
+		"bio": "Maya Shah was born in 2003, and is an aspiring filmmaker. Art has always been a huge part of her life. She is a multi-faceted artist with interests in piano, dance, creative writing, and filmmaking. However, filmmaking is what she wants to focus on seriously for the rest of her life. She began making films in sixth grade, and continued all through middle school. By the end of middle school, she knew she wanted to make films for the rest of her life. She wants to focus on directing and editing specifically in the field of film, and currently attends Interlochen Arts Academy, where she is majoring in the Motion Picture Arts Program. Here, she is receiving excellent hands-on experiences with state of the art equipment, and is also building her portfolio and artist statement for college."
+	},
+	"abby-ann-muller": {
+		"name": "Abby Ann Muller",
+		"location": "Rogers City, MI",
+		"bio": "I enjoy all things involving movies, music and food. I was in track, cross country, softball, dancing, karate and pageants. I mostly spend my free time on Netflix or listening to music. I really enjoy going to concerts and hanging out with my puppy Reese. Once I graduate, I would like to go into special effects makeup and photography. My dream job is being a photographer in New York."
+	},
+	"kiara-linver": {
+		"name": "kiara-linver",
+		"location": "Interlochen, MI",
+		"bio": "From the age of four I started musical theatre, and did a bit of acting for fun until 5th grade, when I decided to write, shoot, and edit a musical movie (albeit it was not very good due to the fact that I was in 5th grade) but I fell in love with the filmmaking world. I took a film class at my junior high school, attended the Multimedia Arts and Design Academy for my 9th-11th grade years, and applied and was accepted to Interlochen Arts Academy for the Motion Picture Arts major for my senior year. I am so excited to see what change I can make by sparking creativity, entertainment, and love into the world!"
+	},
+	"kelly-forzaglia": {
+		"name": "Kelly Forzaglia",
+		"location": "Fuquay-Varina, NC",
+		"bio": "Kelly Forzaglia is in her first year at UNC School of the Arts, pursuing Screenwriting. While writing is her first passion, her favorite place is the movie theater; she goes there at least once a week. She loves universal films and mainly focuses on character development. Some of her favorite movies range from classics like <em>The Godfather</em> and <em>Gone With the Wind</em> to more modern films like <em>The Secret Life of Walter Mitty</em>, <em>La La Land</em>, and <em>Iron Man</em>."
+	},
+	"kaki-thorell": {
+		"name": "Kaki Thorell",
+		"location": "Greenville, NC",
+		"bio": "I&rsquo;m an 18-year-old college freshman with a name that people find difficult to pronounce and believe. All my life I have loved 2 things: making people listen to my loud opinions and movies. So naturally, film criticism felt like the right place for me. I&rsquo;m a diehard <em>Jennifer&rsquo;s Body</em> fan, <em>Star Wars</em> prequel defender, collector of DVDs, Keira Knightley enthusiast, and a nostalgic sap who still misses her local video store."
+	},
+	"domenic-strazzabosco": {
+		"name": "Domenic Strazzabosco",
+		"location": "San Francisco, CA",
+		"bio": "Domenic Strazzabosco is completing his third year at San Francisco State University where he is studying cinema and journalism. He is interested in both film criticism and in pop culture, the roles both Hollywood and actors play in society, and he hopes to be able to cover these topics at a publication in the future. Additionally he enjoys analyzing the portrayals of female characters and thinking of films through a feminist or intersectional perspective. Amongst his favorite films are <em>Sunset Blvd.</em>, <em>The Incredibles</em>, <em>Boyhood</em> and <em>The Normal Heart</em> but strongly believes the best piece of entertainment produced is <em>Game of Thrones</em>."
+	},
+	"": {
+		"name": "",
+		"location": "",
+		"bio": ""
+	},
+	"ryan-parker": {
+		"name": "Ryan Parker",
+		"location": "Washington, D.C.",
+		"bio": "My name is Ryan Parker. I was born in New London, Connecticut, and was raised in Hingham, Massachusetts. I first gained interest in film after watching Alfonso Cuarón&rsquo;s <em>Children of Men</em> (2006) in a high school literature class. This led me to attending American University in Washington, D.C., where I study film production. At AU, I have broadened my library of film, ranging from Independent Genre Cinema to International Arthouse. Since attending college, I have written for several student-run film criticism publications, including <a href=\"https://lacemagx.com/reviews/\" target=\"_blank\">LACE Magazine</a> and <a href=\"https://medium.com/b-roll\" target=\"_blank\">B-Roll</a>, where I share my love and appreciation of film to a larger audience. Some of my favorite films include <em>The Witch</em> (2015), <em>Come and See</em> (1985), and <em>In the Mood for Love</em> (2000)."
+	},
+	"mang-lu": {
+		"name": "Mark Lu",
+		"location": "Washington, D.C.",
+		"bio": "Mang, who goes by Mark, is an undergraduate student in the American University Class of 2021 and studies economics and political science. He is from the Bay Area in California and is an admin for an online film community on Facebook. He is an amateur screenwriter and co-produced his first feature-length production last year, which wrapped principal photography at the end of 2018 and is set for a May 2019 release. His favorite movie is <em>The Lion King</em>."
+	},
+	"anthony-iessi": {
+		"name": "Anthony Iessi",
+		"location": "New Rochelle, NY",
+		"bio": "I am a recent graduate of Syracuse University where I majored in film. Currently, I work as a customer service assistant at Film Emporium, a film insurance brokerage in Larchmont, NY.  Since I was very little, I&rsquo;ve been passionate about writing and talking about films. While I enjoy seeing film&rsquo;s online and instantaneously, I still don&rsquo;t mind seeing films in a theater. My favorite filmmakers to watch are Martin Scorsese and Paul Thomas Anderson."
+	},
+	"haidyn-harvey": {
+		"name": "Haidyn Harvey",
+		"location": "Calabasas, CA",
+		"bio": "I&rsquo;m a senior at Pepperdine University studying film and journalism. I am the assistant editor for the Life & Arts section of my campus newspaper where I regularly write film reviews. I&rsquo;ve been passionate about film as long as I can remember and have traveled the world pursuing my passion. In 2016 I interned at the Cannes Film Festival where I had the opportunity to watch a lot of incredible and groundbreaking movies. In my free time, I also love to hike and I love poetry."
+	},
+	"jacob-gratto": {
+		"name": "Jacob Gratto",
+		"location": "Chagrin Falls, OH",
+		"bio": "Jacob is a junior film major at Syracuse University. Amidst pursuing his B.F.A., writing film reviews is a hobby that he is most passionate about. It is ultimately Jacob&rsquo;s dream to one day write and direct his own feature film. Jacob believes writing about film is both difficult yet rewarding: writing about cinema is meditating, but on the other hand, film is a visual medium, so how many words can speak for the power of the screen? Some of Jacob&rsquo;s favorite films include: <em>Pulp Fiction</em>, <em>The Godfather</em>, <em>Taxi Driver</em>, <em>Eyes Wide Shut</em>, <em>Star Wars</em> (1977), <em>Pickpocket</em>, <em>Au Hasard Balthazar</em>, <em>Tampopo</em>, <em>Dazed and Confused</em>, <em>Spirited Away</em>, and <em>Slacker</em>&mdash;a healthy mix of mainstream, foreign, and independent cinema."
+	},
+	"elizabeth-gilmore": {
+		"name": "Elizabeth Gilmore",
+		"location": "Washington, D.C.",
+		"bio": "Elizabeth Gilmore is senior at American University. She is currently finishing her undergraduate degree in Audio Technology with a concentration in Physics. She also chose to study cinema studies as a minor in order to keep herself educated on the realm of film. Recently, she has taken a particular interest in A24&rsquo;s movies and hopes to one day combine her interests for sound and film."
+	},
+	"tara-dorje": {
+		"name": "Tara Dorje",
+		"location": "Ann Arbor, MI",
+		"bio": "Tara Dorje is a junior studying Art History at the University of Michigan. Originally from Ann Arbor, Michigan, Tara is currently interning at The Metropolitan Museum of Art and MoMA PS1 in New York City. She is passionate about studying visual culture and wearing ugly band t-shirts."
 	}
 }

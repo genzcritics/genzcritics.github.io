@@ -117,8 +117,7 @@ PAGES_FOOTER = '''<!-- Footer -->
 ############################## AUTHOR CONSTS ##############################
 ###########################################################################
 
-AUTHOR_HEADER = '''
-<!DOCTYPE html>
+AUTHOR_HEADER = '''<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -127,20 +126,20 @@ AUTHOR_HEADER = '''
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/logo_no-background.png">
+    <link rel="icon" href="../img/logo_no-background.png">
 
     <title>Gen Z Critics &mdash; Reviews & Essays</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../packages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../packages/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="../packages/css/clean-blog.css" rel="stylesheet">
 
   </head>
 
@@ -173,7 +172,7 @@ AUTHOR_HEADER = '''
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/writing.jpg')">
+    <header class="masthead" style="background-image: url('../img/writing.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -196,8 +195,7 @@ AUTHOR_HEADER = '''
             <div class="col-lg-4 col-md-5 col-sm-8 col-xs-8">
 '''
 
-AUTHOR_FOOTER = '''
-<!-- Footer -->
+AUTHOR_FOOTER = '''<!-- Footer -->
     <footer>
       <div class="container">
         <div class="row justify-content-center">
@@ -222,11 +220,15 @@ AUTHOR_FOOTER = '''
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../packages/vendor/jquery/jquery.min.js"></script>
+    <script src="../packages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../packages/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../packages/vendor/scrollreveal/scrollreveal.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.js"></script>
+    <script src="../packages/js/clean-blog.js"></script>
 
   </body>
 

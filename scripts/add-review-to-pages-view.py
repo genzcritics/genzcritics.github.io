@@ -117,12 +117,11 @@ else:
         html += post
     html += consts.PAGINATION_HEADER
     
-    pagination = [''] * 7
+    pagination = [''] * 6
     pagination[0] = '<a href="../' + str(num_pages) + '">&larr; Prev</a>'
     for i in range(num_pages - 3, num_pages + 1):
         pagination[i - (num_pages - 4)] = '<a href="../' + str(i) + '">' + str(i) + '</a>'
     pagination[5] = '<a href="" class="active">' + str(num_pages + 1) + '</a>'
-    pagination[6] = ''
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
