@@ -1,3 +1,7 @@
+############################################################################
+############################### PAGES CONSTS ###############################
+############################################################################
+
 PAGES_HEADER = '''<!DOCTYPE html>
 <html lang="en">
 
@@ -12,15 +16,15 @@ PAGES_HEADER = '''<!DOCTYPE html>
     <title>Gen Z Critics &mdash; Reviews & Essays</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../packages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../packages/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="../packages/css/clean-blog.css" rel="stylesheet">
 
   </head>
 
@@ -72,6 +76,46 @@ PAGES_HEADER = '''<!DOCTYPE html>
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 '''
+
+PAGES_FOOTER = '''<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-0">
+            <a href="https://www.facebook.com/genzcritics/" class="fa fa-facebook" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://twitter.com/genzcritics/" class="fa fa-twitter" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://www.instagram.com/genzcritics/" class="fa fa-instagram" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="https://www.youtube.com/channel/UCS2AfcFO_96svDhcG1KIj_A" class="fa fa-youtube" target="blank"></a>
+          </div>
+          <div class="col-sm-0">
+            <a href="mailto:genzcritics@gmail.com" class="fa fa-envelope"></a>
+          </div>
+        </div>
+        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2020</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../packages/vendor/jquery/jquery.min.js"></script>
+    <script src="../packages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../packages/js/clean-blog.js"></script>
+
+  </body>
+
+</html>
+'''
+
+###########################################################################
+############################## AUTHOR CONSTS ##############################
+###########################################################################
 
 AUTHOR_HEADER = '''
 <!DOCTYPE html>
@@ -152,42 +196,6 @@ AUTHOR_HEADER = '''
             <div class="col-lg-4 col-md-5 col-sm-8 col-xs-8">
 '''
 
-FOOTER = '''<!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-sm-0">
-            <a href="https://www.facebook.com/genzcritics/" class="fa fa-facebook" target="blank"></a>
-          </div>
-          <div class="col-sm-0">
-            <a href="https://twitter.com/genzcritics/" class="fa fa-twitter" target="blank"></a>
-          </div>
-          <div class="col-sm-0">
-            <a href="https://www.instagram.com/genzcritics/" class="fa fa-instagram" target="blank"></a>
-          </div>
-          <div class="col-sm-0">
-            <a href="https://www.youtube.com/channel/UCS2AfcFO_96svDhcG1KIj_A" class="fa fa-youtube" target="blank"></a>
-          </div>
-          <div class="col-sm-0">
-            <a href="mailto:genzcritics@gmail.com" class="fa fa-envelope"></a>
-          </div>
-        </div>
-        <p class="copyright text-muted">Copyright &copy; Gen Z Critics 2020</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.js"></script>
-
-  </body>
-
-</html>
-'''
-
 AUTHOR_FOOTER = '''
 <!-- Footer -->
     <footer>
@@ -233,6 +241,10 @@ AUTHOR_NO_POSTS = '''
             </h2>
           </div>
 '''
+
+############################################################################
+####################### BOTH PAGES AND AUTHOR CONSTS #######################
+############################################################################
 
 PAGINATION_HEADER = '''
 <!-- Pagination -->

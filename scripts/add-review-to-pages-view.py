@@ -65,7 +65,7 @@ for i in range(0, num_pages):
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
-    html += consts.FOOTER
+    html += consts.PAGES_FOOTER
     html_pages.append(html)
 
 
@@ -88,7 +88,7 @@ if num_posts_leftover == 0:
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
-    html += consts.FOOTER
+    html += consts.PAGES_FOOTER
     html_pages[len(html_pages) - 1] = html
     
     # Now flesh out the html and pagination for the penultimate page
@@ -108,7 +108,7 @@ if num_posts_leftover == 0:
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
-    html += consts.FOOTER
+    html += consts.PAGES_FOOTER
     
     html_pages[len(html_pages) - 2] = html
 else:
@@ -127,7 +127,7 @@ else:
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
-    html += consts.FOOTER
+    html += consts.PAGES_FOOTER
     html_pages.append(html)
     
     # Now flesh out the html and pagination for the penultimate page
@@ -147,7 +147,7 @@ else:
     html += '\n'.join(pagination)
     
     html += consts.PAGINATION_FOOTER
-    html += consts.FOOTER
+    html += consts.PAGES_FOOTER
     
     # -2 because at this point the size of html_pages has increased -.-
     html_pages[len(html_pages) - 2] = html
@@ -157,10 +157,6 @@ else:
 # STEP 4: Save the html pages as index.html files into the correct repositories
 ############################################################################
 absolute_path = '/Users/sharonkim/genzcritics.github.io/reviews/page/'
-for i in range(1, len(html_pages) + 1):
-    if not os.path.exists(absolute_path + str(i)):
-        os.makedirs(absolute_path + (str(i)))
-        print 'Copy file dependencies for reviews/page/' + str(i)
 
 for page in html_pages:
     filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
