@@ -6,7 +6,6 @@
 
 import json
 import consts
-import os
 
 with open('../reviews-data.json') as d:
     entries = json.load(d)
