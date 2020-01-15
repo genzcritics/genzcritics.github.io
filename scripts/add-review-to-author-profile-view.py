@@ -33,9 +33,10 @@ while author not in valid_authors:
 
 
 ############################################################################
-# STEP 2: Flesh out the header for this specific author's profile
+# STEP 2: Flesh out the header for this author's profile
 ############################################################################
 header = consts.AUTHOR_HEADER
+first_page_header = consts.AUTHOR_FIRST_PAGE_HEADER
 
 author_obj = author_entries[author]
 s = '<img class="rounded-circle" src="../img/' + author + '.jpg" alt="' + author_obj['name'] + '">'
@@ -74,6 +75,12 @@ num_pages = len(posts) / 4
 num_posts_leftover = len(posts) % 4
 
 for i in range(0, num_pages):
+    if i == 0:
+        html_page = first_page_header
+        html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
+        html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
+        html_page += consts.AUTHOR_FOOTER
+        html_pages.append(html_page)
     html_page = header
     html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
     html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
@@ -99,7 +106,7 @@ with open(absolute_path + '/index.html', 'w') as f:
     try: f.write(html_pages[0])
     except: print 'Errored on root index.html'
 
-for page in html_pages:
+for page in html_pages[1:]:
     absolute_path += '/page/'
     filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
     with open(filename, 'w') as f:
