@@ -19,24 +19,59 @@ with open('../reviews-data.json') as reviews_data:
 print '##################################################'
 print '#################### hello :) ####################'
 print '##################################################'
-print '\n******************* Copy+paste pagination from soon-to-be modified pages if need be *******************'
 print '\nAuthors with more than 4 reviews:'
 valid_authors = []
 for author in author_entries.keys():
-    if filter(lambda entry: entry['profile'] == author, review_entries) > 4:
+    if len(filter(lambda entry: entry['profile'] == author, review_entries)) > 4:
         print author
         valid_authors.append(author)
 
-author = raw_input('Enter the author ID: ')
+author = raw_input('\nEnter the author ID: ')
 while author not in valid_authors:
     author = raw_input('That author has not written enough reviews; please enter a valid author instead: ')
 
 
 ############################################################################
-# STEP 2: Flesh out the header for this author's profile
+# STEP 2: First, make the root ${author}/index.html html and append to the 
+# beginning of html_pages
+############################################################################
+header = consts.AUTHOR_ROOT_HEADER
+author_obj = author_entries[author]
+s = '<img class="rounded-circle" src="../img/' + author + '.jpg" alt="' + author_obj['name'] + '">'
+s += '</div><div class="col-lg-auto member-info">'
+s += '<h2 class="name">' + author_obj['name'] + '</h2>'
+s += '<h4 class="location">' + author_obj['location'] + '</h4></div></div>'
+s += '<p>' + author_obj['bio'] + '</p><hr>\n\n'
+header += s
+
+posts_by_author = filter(lambda entry: entry['profile'] == author, review_entries)
+posts = []
+
+for post in list(reversed(posts_by_author))[:4]:
+    post_html = '<div class="post-preview"><a href="../../' + post['article'] + '.html">'
+    post_html += '<h2 class="post-title">' + post['title'] + '</h2>'
+    post_html += '<h3 class="post-subtitle">' + post['subtitle'] + '</h3></a>' if 'subtitle' in post.keys() else '</a>'
+    post_html += '<p class="post-meta">by <a href="">'
+    post_html += post['author'] + '</a> on ' + post['date'] + '</p>'
+    post_html += '<a href="../../' + post['article'] + '.html">'
+    post_html += '<img class="preview-image" src="../img/' + post['image'] + '"></a></div><hr>\n\n'
+    posts.append(post_html)
+
+html_pages = []
+
+html_page = header
+html_page += reduce(lambda a, b: a + b, posts)
+html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
+html_page += consts.AUTHOR_FOOTER
+html_pages.append(html_page)
+
+
+############################################################################
+# STEP 3: Now make the htmls for the first page (non-root) AND the other 
+# pages as well, and similarly append to html_pages
 ############################################################################
 header = consts.AUTHOR_HEADER
-first_page_header = consts.AUTHOR_FIRST_PAGE_HEADER
+posts = []
 
 author_obj = author_entries[author]
 s = '<img class="rounded-circle" src="../img/' + author + '.jpg" alt="' + author_obj['name'] + '">'
@@ -46,13 +81,6 @@ s += '<h4 class="location">' + author_obj['location'] + '</h4></div></div>'
 s += '<p>' + author_obj['bio'] + '</p><hr>'
 header += s
 
-
-############################################################################
-# STEP 3: Determine which posts this author has written by parsing through 
-# reiview-data.json, and create htmls for each post.
-############################################################################
-posts_by_author = filter(lambda entry: entry['profile'] == author, review_entries)
-posts = []
 for post in reversed(posts_by_author): # the json is in chronological order; we want to display reverse chronological order
     post_html = '<div class="post-preview"><a href="../../../../' + post['article'] + '.html">'
     post_html += '<h2 class="post-title">' + post['title'] + '</h2>'
@@ -63,24 +91,12 @@ for post in reversed(posts_by_author): # the json is in chronological order; we 
     post_html += '<img class="preview-image" src="../img/' + post['image'] + '"></a></div><hr>\n\n'
     posts.append(post_html)
 
-
-############################################################################
-# STEP 4: Flesh out the complete html code for each page view, depending on 
-# how many pages the author requires
-############################################################################
 html = ''
-html_pages = []
 
 num_pages = len(posts) / 4
 num_posts_leftover = len(posts) % 4
 
 for i in range(0, num_pages):
-    if i == 0:
-        html_page = first_page_header
-        html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
-        html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
-        html_page += consts.AUTHOR_FOOTER
-        html_pages.append(html_page)
     html_page = header
     html_page += posts[i*4] + posts[i*4 + 1] + posts[i*4 + 2] + posts[i*4 + 3]
     html_page += consts.PAGINATION_HEADER + '*****INSERT PAGINATION HERE*****\n' + consts.PAGINATION_FOOTER
@@ -106,9 +122,9 @@ with open(absolute_path + '/index.html', 'w') as f:
     try: f.write(html_pages[0])
     except: print 'Errored on root index.html'
 
+absolute_path += '/page/'
 for page in html_pages[1:]:
-    absolute_path += '/page/'
-    filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
+    filename = absolute_path + str(html_pages.index(page)) + '/index.html'
     with open(filename, 'w') as f:
         try:
             f.write(page)

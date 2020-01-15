@@ -117,7 +117,7 @@ PAGES_FOOTER = '''<!-- Footer -->
 ############################## AUTHOR CONSTS ##############################
 ###########################################################################
 
-AUTHOR_FIRST_PAGE_HEADER = '''<!DOCTYPE html>
+AUTHOR_ROOT_HEADER = '''<!DOCTYPE html>
 <html lang="en">
 
   <head>
