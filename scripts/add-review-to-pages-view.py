@@ -7,7 +7,7 @@
 import json
 import consts
 
-with open('../reviews-data.json') as d:
+with open('./reviews-data.json') as d:
     entries = json.load(d)
 
 

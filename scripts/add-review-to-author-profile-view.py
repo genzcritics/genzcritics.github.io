@@ -6,10 +6,10 @@
 import json
 import consts
 
-with open('../author-data.json') as author_data:
+with open('./author-data.json') as author_data:
     author_entries = json.load(author_data)
 
-with open('../reviews-data.json') as reviews_data:
+with open('./reviews-data.json') as reviews_data:
     review_entries = json.load(reviews_data)
 
 
