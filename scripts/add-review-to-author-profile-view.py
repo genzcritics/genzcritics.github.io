@@ -5,6 +5,7 @@
 
 import json
 import consts
+import os
 
 with open('./author-data.json') as author_data:
     author_entries = json.load(author_data)
@@ -124,11 +125,12 @@ with open(absolute_path + '/index.html', 'w') as f:
 
 absolute_path += '/page/'
 for page in html_pages[1:]:
-    filename = absolute_path + str(html_pages.index(page)) + '/index.html'
+    curr_page = html_pages.index(page)
+    filename = absolute_path + str(curr_page) + '/index.html'
     with open(filename, 'w') as f:
         try:
             f.write(page)
-        except:
-            print 'Errored on: ' + filename
+        except IOError:
+            os.mkdir(absolute_path + str(curr_page))
 
 print '***Remember to manually include pagination for each page!***'

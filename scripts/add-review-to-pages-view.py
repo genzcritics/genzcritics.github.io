@@ -6,6 +6,7 @@
 
 import json
 import consts
+import os
 
 with open('./reviews-data.json') as d:
     entries = json.load(d)
@@ -157,9 +158,10 @@ else:
 absolute_path = '/Users/sharonkim/genzcritics.github.io/reviews/page/'
 
 for page in html_pages:
-    filename = absolute_path + str(html_pages.index(page) + 1) + '/index.html'
+    curr_page = html_pages.index(page) + 1
+    filename = absolute_path + str(curr_page) + '/index.html'
     with open(filename, 'w') as f:
         try:
             f.write(page)
-        except:
-            print 'Errored on: ' + filename
+        except IOError:
+            os.mkdir(absolute_path + str(curr_page))
